@@ -21,7 +21,6 @@ create database `jeecg-boot` default character set utf8mb4 collate utf8mb4_gener
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
-USE `jeecg-boot`;
 
 -- ----------------------------
 -- Table structure for ces_field_kongj
@@ -5041,8 +5040,8 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 INSERT INTO `sys_user` VALUES ('3d464b4ea0d2491aab8a7bde74c57e95', 'zhangsan', '张三', '02ea098224c7d0d2077c14b9a3a1ed16', 'x5xRdeKB', 'https://static.jeecg.com/temp/jmlogo_1606575041993.png', NULL, NULL, NULL, NULL, '财务部', 1, 0, NULL, NULL, 1, '0005', '总经理', NULL, 'admin', '2020-05-14 21:26:24', 'admin', '2020-09-09 14:42:51', 1, '', '', NULL);
 INSERT INTO `sys_user` VALUES ('a75d45a015c44384a04449ee80dc3503', 'jeecg', 'jeecg', '58a714412072f0b9', 'mIgiYJow', 'https://static.jeecg.com/temp/国炬软件logo_1606575029126.png', NULL, 1, NULL, NULL, 'A02A01', 1, 0, NULL, NULL, 1, '00002', 'devleader', NULL, 'admin', '2019-02-13 16:02:36', 'admin', '2020-11-26 15:16:05', 1, '', NULL, NULL);
-INSERT INTO `sys_user` VALUES ('e9ca23d68d884d4ebb19d07889727dae', 'admin', '管理员', 'cb362cfeefbf3d8d', 'RCGTeGiH', 'https://static.jeecg.com/temp/国炬软件logo_1606575029126.png', '2018-12-05 00:00:00', 1, 'jeecg@163.com', '18611111111', 'A01', 1, 0, NULL, NULL, 1, '00001', '总经理', NULL, NULL, '2020-06-21 17:54:10', 'admin', '2020-07-10 15:27:10', 2, 'c6d7cb4deeac411cb3384b1b31278596', '', NULL);
-INSERT INTO `sys_user` VALUES ('f0019fdebedb443c98dcb17d88222c38', 'zhagnxiao', '张小红', 'f898134e5e52ae11a2ffb2c3b57a4e90', 'go3jJ4zX', 'https://static.jeecg.com/temp/jmlogo_1606575041993.png', '2019-04-01 00:00:00', NULL, NULL, NULL, '研发部,财务部', 2, 0, NULL, NULL, 1, '00003', '', NULL, 'admin', '2020-10-01 19:34:10', 'admin', '2020-11-26 15:24:59', 1, '', '', NULL);
+INSERT INTO `sys_user` VALUES ('e9ca23d68d884d4ebb19d07889727dae', 'admin', '管理员', 'cb362cfeefbf3d8d', 'RCGTeGiH', 'https://static.jeecg.com/temp/国炬软件logo_1606575029126.png', '2018-12-05 00:00:00', 1, 'jeecg@163.com', '18611111111', 'A01', 1, 0, NULL, NULL, 1, '00001', '总经理', NULL, NULL, '2038-06-21 17:54:10', 'admin', '2020-07-10 15:27:10', 2, 'c6d7cb4deeac411cb3384b1b31278596', '', NULL);
+INSERT INTO `sys_user` VALUES ('f0019fdebedb443c98dcb17d88222c38', 'zhagnxiao', '张小红', 'f898134e5e52ae11a2ffb2c3b57a4e90', 'go3jJ4zX', 'https://static.jeecg.com/temp/jmlogo_1606575041993.png', '2019-04-01 00:00:00', NULL, NULL, NULL, '研发部,财务部', 2, 0, NULL, NULL, 1, '00003', '', NULL, 'admin', '2023-10-01 19:34:10', 'admin', '2020-11-26 15:24:59', 1, '', '', NULL);
 
 -- ----------------------------
 -- Table structure for sys_user_agent
@@ -5363,18 +5362,6 @@ DROP TABLE IF EXISTS QRTZ_BLOB_TRIGGERS;
 DROP TABLE IF EXISTS QRTZ_TRIGGERS;
 DROP TABLE IF EXISTS QRTZ_JOB_DETAILS;
 DROP TABLE IF EXISTS QRTZ_CALENDARS;
-
-drop table if exists qrtz_fired_triggers;
-drop table if exists qrtz_paused_trigger_grps;
-drop table if exists qrtz_scheduler_state;
-drop table if exists qrtz_locks;
-drop table if exists qrtz_simple_triggers;
-drop table if exists qrtz_simprop_triggers;
-drop table if exists qrtz_cron_triggers;
-drop table if exists qrtz_blob_triggers;
-drop table if exists qrtz_triggers;
-drop table if exists qrtz_job_details;
-drop table if exists qrtz_calendars;
 
 
 CREATE TABLE QRTZ_JOB_DETAILS
