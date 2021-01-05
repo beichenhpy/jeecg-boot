@@ -39,12 +39,14 @@ public class DictAspect {
     @Autowired
     private CommonAPI commonAPI;
 
-    // 定义切点Pointcut
+    /**
+     * 这里定义切点为所有的Controller中的 public方法
+     */
     @Pointcut("execution(public * org.jeecg.modules..*.*Controller.*(..))")
-    public void excudeService() {
+    public void excludeService() {
     }
 
-    @Around("excudeService()")
+    @Around("excludeService()")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable {
     	long time1=System.currentTimeMillis();	
         Object result = pjp.proceed();
@@ -66,7 +68,7 @@ public class DictAspect {
      *      sex:1,
      *      sex_dictText:"男"
      * }
-     * 前端直接取值sext_dictText在table里面无需再进行前端的字典转换了
+     * 前端直接取值sex_dictText在table里面无需再进行前端的字典转换了
      *  customRender:function (text) {
      *               if(text==1){
      *                 return "男";
