@@ -9,6 +9,7 @@ import org.jeecgframework.codegenerate.window.CodeWindow;
  * @site www.jeecg.com
  * @Version:V1.0.1
  */
+@Deprecated
 public class JeecgOneGUI {
 
 	/** 详细使用手册： http://doc.jeecg.com/1275846 */

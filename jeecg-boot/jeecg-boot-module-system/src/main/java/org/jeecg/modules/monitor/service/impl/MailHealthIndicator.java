@@ -15,7 +15,8 @@ import org.springframework.stereotype.Component;
 public class MailHealthIndicator implements HealthIndicator {
 
 
-    @Override public Health health() {
+    @Override
+    public Health health() {
         int errorCode = check();
         if (errorCode != 0) {
             return Health.down().withDetail("Error Code", errorCode) .build();
